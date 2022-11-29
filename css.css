@@ -36,22 +36,64 @@ main{
 }
 
 article{
-    padding:1rem;
+    padding:1.5rem;
     background-color: var(--very-dark-blue-card);
     border-radius:15px;
     
     max-width:350px;
 }
 
+.img-container{
+    position:relative;
+    cursor:pointer;
+}
+
 .equil{
     width:100%;
     border-radius:10px;
+    
+}
+
+.img-overlay{
+    position:absolute;
+    background-color:var(--cyan);
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    z-index:1;
+    width:100%;
+    height:99%;
+    opacity:0.4;
+    border-radius:10px;
+    display:none;
+}
+.eye{
+    position:absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    margin:auto;
+}
+
+.img-container:hover .img-overlay{
+    display:block;
+}
+
+.img-container:hover .eye{
+    z-index:10;
 }
 
 .description p:nth-child(1){
     color:white;
     font-size:var(--font-size);
     font-weight:600;
+    cursor:pointer;
+}
+
+.description p:nth-child(1):hover{
+    color:var(--cyan)
 }
 
 .description p:nth-child(2){
@@ -70,6 +112,12 @@ article{
     align-items:center;
     gap:5px;
     font-weight:600;
+    animation: bounce 1s linear infinite;
+}
+
+@keyframes bounce{
+    from{transfrom:translate(0,-1);}
+    to{transform:translate(0,5px);}
 }
 
 .days{
@@ -87,7 +135,7 @@ hr{
 
 .creator{
     display:flex;
-    gap:1rem;
+    gap:0.5rem;
     align-items:center;
 }
 
@@ -100,8 +148,14 @@ hr{
 .creator p{
     font-weight: 300;
     color:var(--white);
+    cursor:pointer;
+    display:inline;
 }
 
 span{
     color:var(--soft-blue)
+}
+
+.creator p:hover{
+    color:var(--cyan);
 }
