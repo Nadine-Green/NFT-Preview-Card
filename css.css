@@ -8,7 +8,7 @@
     --very-dark-blue-card : hsl(216, 50%, 16%);  /*(card BG)*/
     --very-dark-blue : hsl(215, 32%, 27%);  /*(line)*/
     --white: hsl(0, 0%, 100%);
-    --font-size: 18px; /*(paragraph)*/
+    --font-size: 1.125rem; /*(paragraph)*/
     font-family:'Outfit';
 }
 
@@ -24,10 +24,6 @@ a{
 body{
     padding:0;
     margin:0;
-    background-color:var(--very-dark-blue-main);
-}
-
-main{
     height:100vh;
     background-color:var(--very-dark-blue-main);
     padding:1.5rem;
@@ -38,14 +34,14 @@ main{
 article{
     padding:1.5rem;
     background-color: var(--very-dark-blue-card);
-    border-radius:15px;
-    
-    max-width:350px;
+    border-radius:0.9375rem;
+    max-width:21.875rem;
 }
 
 .img-container{
     position:relative;
     cursor:pointer;
+    transition: 3.05s ease-in-out;
 }
 
 .equil{
@@ -63,7 +59,7 @@ article{
     z-index:1;
     width:100%;
     height:99%;
-    border-radius:10px;
+    border-radius:0.625rem;
     display:none;
 }
 .eye{
@@ -79,24 +75,23 @@ article{
 .img-container:hover .img-overlay{
     display:block;
     background: rgba(0, 255, 255,0.4);
+    opacity:0.5;
 }
 
-.img-container:hover .eye{
-    z-index:10;
-}
 
-.description p:nth-child(1){
+h1{
     color:white;
     font-size:20px;
     font-weight:600;
     cursor:pointer;
+    transition: .3s ease-in-out;
 }
 
-.description p:nth-child(1):hover{
+h1:hover{
     color:var(--cyan)
 }
 
-.description p:nth-child(2){
+.description p{
     color:var(--soft-blue);
     line-height:1.5;
 }
@@ -124,13 +119,13 @@ article{
     color:var(--soft-blue);
     display:flex;
     align-items:center;
-    gap:5px;
+    gap:0.3125rem;
 }
 
 hr{
     background-color: var(--soft-blue);
-    border-width:0.5px;
-    height:0.5px;
+    border-width: 0.03125rem;
+    height: 0.03125rem;
 }
 
 .creator{
@@ -150,6 +145,7 @@ hr{
     color:var(--white);
     cursor:pointer;
     display:inline;
+    transition: .3s ease-in-out;
 }
 
 span{
